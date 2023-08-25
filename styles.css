@@ -10,6 +10,9 @@ header,h1,h2,h3,h4,h5,h6,p,text,strong,span {
 button {
   font-family: 'Ubuntu', sans-serif;
   border: 2px solid;
+}
+
+button.downloadbtn {
   border-radius: 5px;
 }
 
