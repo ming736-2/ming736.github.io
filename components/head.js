@@ -34,16 +34,16 @@ class SiteNavbarTop extends HTMLElement {
           <div class="topnav">
           <a class="${isactive(this,"index.html")}" href="${this.getAttribute("root")}index.html">Home</a>
           <!--<div class="dropdown">
-              <button class="dropbtn">Dropdown
+              <button class="dropbtn">Social Hub
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Main</a>
+                <a href="${this.getAttribute("root")}socialhub/downloads.html" class="${isactive(this,"socialhub/downloads.html")}">Downloads</a>
+                <!--<a href="#">Link 3</a>-->
               </div>
             </div>-->
-          <a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Social Hub</a>
+            <!--<a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Social Hub</a>-->
           <!--<a href="SaveDecrypt.html">FS Save File</a>-->
           <!--<a href="#about">About</a>-->
           </div>
