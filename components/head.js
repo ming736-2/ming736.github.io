@@ -70,7 +70,7 @@ class SiteDownload extends HTMLElement {
     super()
   }
   connectedCallback() {
-    let reltype = this.getAttribute("latest") ? "latest" : this.getAttribute("release") ? "release" : this.getAttribute("beta") ? "beta" : "alpha"
+    let reltype = this.getAttribute("latest") == "" ? "latest" : this.getAttribute("release") == "" ? "release" : this.getAttribute("beta") == "" ? "beta" : "alpha"
     console.log(reltype)
     this.innerHTML = `
     <div class="download-frame">
