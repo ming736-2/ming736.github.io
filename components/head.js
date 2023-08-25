@@ -74,7 +74,7 @@ class SiteDownload extends HTMLElement {
     console.log(reltype)
     this.innerHTML = `
     <div class="download-frame">
-            <span style="color:${reltype == "latest" ? "green" : reltype == "yellow" ? "blue" : reltype == "beta" ? "blue" : "red" }">${reltype.toUpperCase()}</span>
+            <span style="color:${reltype == "latest" ? "limegreen" : reltype == "yellow" ? "blue" : reltype == "beta" ? "blue" : "red" }">${reltype.toUpperCase()}</span>
             <strong class="download-frame-name">${this.getAttribute("name")}</strong>
             <p class="download-frame-desc">${this.getAttribute("desc")}</p>
             <button type="button" value="${this.getAttribute("ref")}" title="Download"  onclick="download(this.value)" >Download</button>
