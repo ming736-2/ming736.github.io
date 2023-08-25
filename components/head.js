@@ -71,6 +71,7 @@ class SiteDownload extends HTMLElement {
   }
   connectedCallback() {
     let reltype = this.getAttribute("latest") ? "latest" : this.getAttribute("release") ? "release" : this.getAttribute("beta") ? "beta" : "alpha"
+    console.log(reltype)
     this.innerHTML = `
     <div class="download-frame">
             <span style="color:${reltype == "latest" ? "green" : reltype == "yellow" ? "blue" : reltype == "beta" ? "blue" : "red" }">${reltype.toUpperCase()}</span>
