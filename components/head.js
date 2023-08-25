@@ -42,7 +42,7 @@ class SiteNavbarTop extends HTMLElement {
                 <a href="${this.getAttribute("root")}socialhub/downloads.html" class="${isactive(this,"socialhub/downloads.html")}">Downloads</a>
                 <!--<a href="#">Link 3</a>-->
               </div>
-            </div>-->
+            </div>
             <!--<a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Social Hub</a>-->
           <!--<a href="SaveDecrypt.html">FS Save File</a>-->
           <!--<a href="#about">About</a>-->
