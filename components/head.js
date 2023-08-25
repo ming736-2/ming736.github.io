@@ -70,8 +70,10 @@ class SiteDownload extends HTMLElement {
     super()
   }
   connectedCallback() {
+    let reltype = this.getAttribute("latest") ? "latest" : this.getAttribute("release") ? "release" : this.getAttribute("beta") ? "beta" : "alpha"
     this.innerHTML = `
     <div class="download-frame">
+            <span style="color:${reltype == "latest" ? "green" : reltype == "yellow" ? "blue" : reltype == "beta" ? "blue" : "red" }">${reltype.toUpperCase()}</span>
             <strong class="download-frame-name">${this.getAttribute("name")}</strong>
             <p class="download-frame-desc">${this.getAttribute("desc")}</p>
             <button type="button" value="${this.getAttribute("ref")}" title="Download"  onclick="download(this.value)" >Download</button>
