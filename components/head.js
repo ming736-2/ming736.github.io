@@ -33,6 +33,7 @@ class SiteNavbarTop extends HTMLElement {
           <header>
           <div class="topnav">
           <a class="${isactive(this,"index.html")}" href="${this.getAttribute("root")}index.html">Home</a>
+          <a class="${isactive(this,"index.html")}" href="${this.getAttribute("root")}mingchat.html">MingChat</a>
           <div class="dropdown">
               <button class="dropbtn">Social Hub
                 <i class="fa fa-caret-down"></i>
