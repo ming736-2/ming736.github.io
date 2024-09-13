@@ -1,6 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  src: url('/assets/fonts/Ubuntu-Light.ttf');
+}
 
-header,h1,h2,h3,h4,h5,h6,p,text,strong,span {
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: url('/assets/fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  src: url('/assets/fonts/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  src: url('/assets/fonts/Ubuntu-Bold.ttf');
+}
+
+header,h1,h2,h3,h4,h5,h6,p,text,strong,span,div {
   font-family: 'Ubuntu', sans-serif;
   color: white;
 }
@@ -120,4 +142,13 @@ div.download-frame {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.site-banner {
+  display: block;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 8px;
 }
