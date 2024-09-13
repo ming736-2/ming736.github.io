@@ -26,16 +26,24 @@ class SiteNavbarTop extends HTMLElement {
           }
         }
         </script>
-          <header>
+        <header>
           <div class="topnav">
-          <a class="${isactive(this,"index.html")}" href="${this.getAttribute("root")}index.html">Home</a>
-          <a class="${isactive(this,"mingchat.html")}" href="${this.getAttribute("root")}mingchat.html">MingChat</a>
+            <a class="${isactive(this,"index.html")}" href="${this.getAttribute("root")}index.html">Home</a>
+            <a class="${isactive(this,"mingchat.html")}" href="${this.getAttribute("root")}mingchat.html">MingChat</a>
+            <div class="dropdown">
+              <button class="dropbtn">Documentation
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="${this.getAttribute("root")}w93/2.x/docs" class="${isactive(this,"w93/2.x/docs")}">Windows 93</a>
+                <a href="${this.getAttribute("root")}w93/trollbox/2.1/docs" class="${isactive(this,"w93/trollbox/2.1/docs")}">Trollbox</a>
+              </div>
+            </div>
             <!--<a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Social Hub</a>-->
-          <!--<a href="SaveDecrypt.html">FS Save File</a>-->
-          <!--<a href="#about">About</a>-->
+            <!--<a href="SaveDecrypt.html">FS Save File</a>-->
+            <!--<a href="#about">About</a>-->
           </div>
-      </div>
-          </header>
+        </header>
         `;
       }
 }
