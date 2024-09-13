@@ -10,13 +10,9 @@ class SiteNavbarTop extends HTMLElement {
       }
         this.innerHTML = `
         <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
         function myFunction() {
           document.getElementById("myDropdown").classList.toggle("show");
         }
-        
-        // Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
           if (!event.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -34,16 +30,6 @@ class SiteNavbarTop extends HTMLElement {
           <div class="topnav">
           <a class="${isactive(this,"index.html")}" href="${this.getAttribute("root")}index.html">Home</a>
           <a class="${isactive(this,"mingchat.html")}" href="${this.getAttribute("root")}mingchat.html">MingChat</a>
-          <div class="dropdown">
-              <button class="dropbtn">Social Hub
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Main</a>
-                <a href="${this.getAttribute("root")}socialhub/downloads.html" class="${isactive(this,"socialhub/downloads.html")}">Downloads</a>
-                <!--<a href="#">Link 3</a>-->
-              </div>
-            </div>
             <!--<a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this,"socialhub/index.html")}">Social Hub</a>-->
           <!--<a href="SaveDecrypt.html">FS Save File</a>-->
           <!--<a href="#about">About</a>-->
