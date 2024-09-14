@@ -27,10 +27,20 @@
         if (split[3] !== "md") {
             throw new Error("not a post")
         }
+        /**
+         * 
+         * @param {string} input 
+         * @returns {string}
+         */
+        function unescape(input) {
+            return input.replace(/#([a-zA-Z0-9]+);/gim,(substr,code)=>{
+                return String.fromCodePoint(parseInt(code,16))
+            })
+        }
         return {
             id: parseInt(split[0]),
             date: new Date(split[1].replace ? split[1].replace("_", ":") : split[1]),
-            title: decodeURIComponent(split[2])
+            title: unescape(split[2])
         }
     }
     /**
