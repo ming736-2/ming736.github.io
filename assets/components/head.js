@@ -10,6 +10,11 @@ const topbar = [
         href: "/beta.html"
     },
     {
+        type: "button",
+        text: "Blog",
+        href: "/blog.html"
+    },
+    {
         type: "dropdown",
         text: "Projects",
         contents: [

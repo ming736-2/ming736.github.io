@@ -24,6 +24,34 @@ i do not own these fonts nor am i endorsed by the owners of it
     font-weight: 700;
     src: url('/assets/fonts/Ubuntu-Bold.ttf');
 }
+/* italic versions */
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    font-style: italic;
+    src: url('/assets/fonts/Ubuntu-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/assets/fonts/Ubuntu-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style: italic;
+    src: url('/assets/fonts/Ubuntu-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-style: italic;
+    src: url('/assets/fonts/Ubuntu-BoldItalic.ttf');
+}
 body {
     visibility: visible;
     background-color: #272727;

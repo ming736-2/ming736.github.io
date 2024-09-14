@@ -1,3 +1,8 @@
+if (!window.queryString) {
+    window.queryString = window.location.search;
+    window.urlParams = new URLSearchParams(queryString);
+}
+
 const link = document.createElement('link');
 link.rel = 'stylesheet'
 link.href = '/assets/styles/main.css';
