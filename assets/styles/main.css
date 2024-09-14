@@ -44,8 +44,6 @@ div {
     color: white;
 }
 
-
-
 button {
     font-family: 'Ubuntu', sans-serif;
     border: 2px solid;
@@ -96,14 +94,12 @@ div.download-frame {
     color: white;
 }
 
-
 .navbar {
     overflow: hidden;
     background-color: #333;
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Links inside the navbar */
 .navbar a {
     float: left;
     font-size: 16px;
@@ -113,13 +109,11 @@ div.download-frame {
     text-decoration: none;
 }
 
-/* The dropdown container */
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
-/* Dropdown button */
 .dropdown .dropbtn {
     font-size: 17px;
     border: none;
@@ -128,30 +122,25 @@ div.download-frame {
     padding: 14px 16px;
     background-color: inherit;
     font-family: 'Ubuntu', sans-serif;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
     text-align: center;
     text-decoration: none;
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: #3f3f3f;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #0000; /*#333*/
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 16;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     float: none;
     color: white;
@@ -159,14 +148,13 @@ div.download-frame {
     text-decoration: none;
     display: block;
     text-align: left;
+    background-color: #333;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #3f3f3f;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -178,4 +166,13 @@ div.download-frame {
     text-align: center;
     padding: 8px;
     margin-bottom: 8px;
+}
+
+div.dropdown-content, div.dropdown-content > :last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+img.topbar-oin, img.topbar-img {
+    max-width: 16px;
 }

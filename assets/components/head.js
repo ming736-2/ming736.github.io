@@ -31,6 +31,39 @@ const topbar = [
 
         ]
     },
+    {
+        type: "dropdown",
+        text: "Socials",
+        contents: [
+            {
+                type: "button",
+                text: "Twitter",
+                href: "https://twitter.com/@ming736_"
+            },
+            {
+                type: "button",
+                text: "YouTube",
+                href: "https://youtube.com/@ming736_YT"
+            },
+            {
+                type: "button",
+                text: "Bluesky",
+                href: "https://ming736.bsky.social"
+            },
+            {
+                type: "button",
+                text: "GitHub",
+                href: "https://github.com/ming736"
+            },
+        ]
+    },
+    {
+        type: "button",
+        text: "<img src='/assets/images/icons/social/github-mark-white.png' class='topbar-img'>",
+        tooltip: "View the source of this site on GitHub",
+        align: "right",
+        href: "https://github.com/ming736/ming736.github.io"
+    },
 ]
 class SiteNavbarTop extends HTMLElement {
     constructor() {
@@ -59,7 +92,7 @@ class SiteNavbarTop extends HTMLElement {
             <!--<a href="#about">About</a>-->
         */
         this.innerHTML = `
-          <div class="site-banner" style="background-color:${siteBanner.bgColor};color:${siteBanner.fgColor}">${siteBanner.text}</div>
+          ${siteBanner.text && `<div class="site-banner" style="background-color:${siteBanner.bgColor};color:${siteBanner.fgColor}">${siteBanner.text}</div>`}
           <script>
           function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
@@ -86,7 +119,7 @@ class SiteNavbarTop extends HTMLElement {
          * @param {Array} button 
          */
         function createButton(button) {
-            return `<a class="${isactive(button.href)}" href="${button.href}?beta_site">${button.text}</a>`
+            return `<a ${button.tooltip ? `title="${button.tooltip} " ` : ""} ${button.align ? `style="float: ${button.align}" ` : ""}class="${isactive(button.href)}" href="${button.href}${button.href.startsWith("/") ? "?beta_site" : ""}" ${button.href.startsWith("/") ? "" : "target=\"_blank\""}>${button.text + (button.href.startsWith("/") ? "" : " <img src='/assets/images/icons/material/open_in_new.32px.png' class='topbar-oin'>")}</a>`
         }
         function createDropdown(dropdown) {
             let btns = ""
