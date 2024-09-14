@@ -3,13 +3,13 @@ class SiteNavbarTop extends HTMLElement {
     super();
   };
   connectedCallback() {
-    function isactive(t, page) {
-      let active = page == location.pathname.split("/")[location.pathname.split("/").length-1] ? "active" : "inactive"
+    function isactive(page) {
+      let active = page == (location.pathname == "/" ? "/index.html" : location.pathname) ? "active" : "inactive"
       //console.log(active, t, t.getAttribute("root")+page)
       return active
     }
     this.innerHTML = `
-        <div class="site-banner">i might redesign this site soon</div>
+        <div class="site-banner"><a href="?beta_site">check out the upcoming version of this site!</a></div>
         <script>
         function myFunction() {
           document.getElementById("myDropdown").classList.toggle("show");
@@ -29,18 +29,18 @@ class SiteNavbarTop extends HTMLElement {
         </script>
         <header>
           <div class="topnav">
-            <a class="${isactive(this, "index.html")}" href="${this.getAttribute("root")}index.html">Home</a>
-            <a class="${isactive(this, "mingchat.html")}" href="${this.getAttribute("root")}mingchat.html">MingChat</a>
+            <a class="${isactive("/index.html")}" href="/index.html">Home</a>
+            <a class="${isactive("/mingchat.html")}" href="/mingchat.html">MingChat</a>
             <div class="dropdown">
               <button class="dropbtn">Documentation
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
-                <a href="${this.getAttribute("root")}w93/2.x/docs" class="${isactive(this, "w93/2.x/docs")}">Windows 93</a>
-                <a href="${this.getAttribute("root")}w93/trollbox/2.1/docs" class="${isactive(this, "w93/trollbox/2.1/docs")}">Trollbox</a>
+                <a href="/w93/2.x/docs" class="${isactive("/w93/2.x/docs")}">Windows 93</a>
+                <a href="/w93/trollbox/2.1/docs" class="${isactive("/w93/trollbox/2.1/docs")}">Trollbox</a>
               </div>
             </div>
-            <!--<a href="${this.getAttribute("root")}socialhub/index.html" class="${isactive(this, "socialhub/index.html")}">Social Hub</a>-->
+            <!--<a href="/socialhub/index.html" class="${isactive("/socialhub/index.html")}">Social Hub</a>-->
             <!--<a href="SaveDecrypt.html">FS Save File</a>-->
             <!--<a href="#about">About</a>-->
           </div>
