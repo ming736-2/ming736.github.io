@@ -59,7 +59,7 @@ const topbar = [
     },
     {
         type: "button",
-        text: "<img src='/assets/images/icons/social/github-mark-white.png' class='topbar-img'>",
+        text: "View on GitHub <img src='/assets/images/icons/social/github-mark-white.png' class='topbar-img'>",
         tooltip: "View the source of this site on GitHub",
         align: "right",
         href: "https://github.com/ming736/ming736.github.io"
