@@ -10,22 +10,22 @@ const topbar = [
         href: "/beta.html"
     },
     {
-        type: "button",
-        text: "MingChat",
-        href: "/mingchat.html"
-    },
-    {
         type: "dropdown",
-        text: "Documentation",
+        text: "Projects",
         contents: [
             {
                 type: "button",
-                text: "Windows 93",
+                text: "MingChat",
+                href: "/mingchat.html"
+            },
+            {
+                type: "button",
+                text: "Windows 93 Docs",
                 href: "/w93/2.x/docs"
             },
             {
                 type: "button",
-                text: "Trollbox",
+                text: "Trollbox Docs",
                 href: "/w93/trollbox/2.1/docs"
             },
 
@@ -63,6 +63,19 @@ const topbar = [
         tooltip: "View the source of this site on GitHub",
         align: "right",
         href: "https://github.com/ming736/ming736.github.io"
+    },
+    {
+        type: "dropdown",
+        text: "Other Stuff",
+        align: "right",
+        contents: [
+            {
+                type: "button",
+                text: "Increased In Points (classic)",
+                tooltip: "By RodriGamer, i worked on it though",
+                href: "https://gamerrodri.github.io/increased-in-points-classic/"
+            }
+        ]
     },
 ]
 class SiteNavbarTop extends HTMLElement {
@@ -126,8 +139,8 @@ class SiteNavbarTop extends HTMLElement {
             dropdown.contents.forEach((v) => {
                 btns += "\n"+createButton(v)
             })
-            return `<div class="dropdown">
-    <button class="dropbtn">${dropdown.text}
+            return `<div class="dropdown" ${dropdown.align ? `style="float: ${dropdown.align}" ` : ""}>
+    <button class="dropbtn"${dropdown.tooltip ? `title="${dropdown.tooltip} " ` : ""}>${dropdown.text}
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
