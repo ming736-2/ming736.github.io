@@ -151,6 +151,8 @@
     if (urlParams.has("id")) {
         document.getElementById("blog-list").style.display = 'none'
         document.getElementById("blog-list-legacy").style.display = 'none'
+        document.getElementById("blog-legacy-h").style.display = 'none'
+        document.getElementById("blog-legacy-p").style.display = 'none'
         let post = await fetchPost(parseInt(urlParams.get("id")))
         if (post.error) {
             document.getElementById("blog-loading").textContent = `Failed to load: ${post.error}`
