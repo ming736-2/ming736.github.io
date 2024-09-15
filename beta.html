@@ -13,6 +13,19 @@
         <meta name="twitter:title" content="ming736's site" />
         <meta name="twitter:description" content="welcome to my site!" />
         <meta name="twitter:site" content="@ming736_" />
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const isBetaSite = urlParams.has('beta_site');
+            const siteVersionOverride = urlParams.get('version');
+            if (siteVersionOverride == "1") {
+                if (location.pathname == "/") {
+                    location.href = "/"
+                } else {
+                    location.href = "/"
+                }
+            }
+        </script>
     </head>
     <body>
         <h1>hello there!</h1>
