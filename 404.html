@@ -27,13 +27,15 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const isBetaSite = urlParams.has('beta_site');
-        if (isBetaSite) {
+        const siteVersionOverride = urlParams.get('version');
+        function loadV2() {
             const script = document.createElement('script');
             script.src = '/assets/components/main.js';
             script.type = 'text/javascript';
             script.defer = true;
             document.head.appendChild(script);
-        } else {
+        }
+        function loadV1() {
             const link = document.createElement('link');
             link.rel = 'stylesheet';
             link.href = '/styles.css';
@@ -54,6 +56,19 @@
                 const navbarTop = document.createElement('navbar-top');
                 document.body.prepend(navbarTop);
             })
+        }
+        if (isBetaSite) {
+            loadV2()
+        } else {
+            if (siteVersionOverride) {
+                switch (siteVersionOverride) {
+                    case "1": loadV1();break
+                    case "2": loadV2();break
+                    default: loadV1();break
+                }
+            } else {
+                loadV1()
+            }
         }
     </script>
 </head>

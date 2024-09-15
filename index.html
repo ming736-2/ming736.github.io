@@ -10,7 +10,7 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const isBetaSite = urlParams.has('beta_site');
-        if (isBetaSite) {location.href = "/beta.html"}
+        if (isBetaSite || urlParams.get('version') == "2") {location.href = "/beta.html"}
     </script>
     <navbar-top></navbar-top>
 </head>
