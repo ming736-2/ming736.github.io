@@ -100,7 +100,7 @@
                     statusText: "Internal Server Error"
                 };
                 try {
-                    const response = await fetch(v.download_url);
+                    const response = await fetch(v.download_url.replace(/#/g,"%23"));
                     safeRes = response;
                     if (!response.ok) throw new Error('Network response was not ok');
                     const result = await response.text();

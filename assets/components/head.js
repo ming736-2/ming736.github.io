@@ -98,7 +98,7 @@ class SiteNavbarTop extends HTMLElement {
             <a class="${isactive("/mingchat.html")}" href="/mingchat.html">MingChat</a>
             <div class="dropdown">
                 <button class="dropbtn">Documentation
-                    <i class="fa fa-caret-down"></i>
+                    <i class=""></i>
                 </button>
                 <div class="dropdown-content">
                     <a href="/w93/2.x/docs" class="${isactive("/w93/2.x/docs")}">Windows 93</a>
@@ -137,7 +137,7 @@ class SiteNavbarTop extends HTMLElement {
          * @param {Array} button 
          */
         function createButton(button) {
-            return `<a ${button.tooltip ? `title="${button.tooltip} " ` : ""} ${button.align ? `style="float: ${button.align}" ` : ""}class="${isactive(button.href)}" href="${button.href}${button.href.startsWith("/") ? "?beta_site" : ""}" ${button.href.startsWith("/") ? "" : "target=\"_blank\""}>${button.text + (button.href.startsWith("/") ? "" : " <img src='/assets/images/icons/material/open_in_new.32px.png' class='topbar-oin'>")}</a>`
+            return `<a ${button.tooltip ? `title="${button.tooltip} " ` : ""} ${button.align ? `style="float: ${button.align}" ` : ""}class="${isactive(button.href)}" href="${button.href}${button.href.startsWith("/") ? "?beta_site" : ""}" ${button.href.startsWith("/") ? "" : "target=\"_blank\""}>${button.text + (button.href.startsWith("/") ? "" : " <img src='/assets/images/icons/material/open_in_new.128px.png' class='topbar-oin'>")}</a>`
         }
         function createDropdown(dropdown) {
             let btns = ""
@@ -146,7 +146,7 @@ class SiteNavbarTop extends HTMLElement {
             })
             return `<div class="dropdown" ${dropdown.align ? `style="float: ${dropdown.align}" ` : ""}>
     <button class="dropbtn"${dropdown.tooltip ? `title="${dropdown.tooltip} " ` : ""}>${dropdown.text}
-        <i class="fa fa-caret-down"></i>
+        <i class=""></i>
     </button>
     <div class="dropdown-content">
         ${btns}

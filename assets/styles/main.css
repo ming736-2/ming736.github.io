@@ -85,6 +85,7 @@ button.downloadbtn {
     border-radius: 10px;
     background-color: #333;
     overflow: hidden;
+    box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.2);
 }
 
 .topnav a {
