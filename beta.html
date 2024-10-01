@@ -20,11 +20,12 @@
             const siteVersionOverride = urlParams.get('version');
             if (siteVersionOverride == "1") {
                 if (location.pathname == "/") {
-                    location.href = "/"
+                    location.href = "/legacy.html"
                 } else {
-                    location.href = "/"
+                    location.href = "/legacy.html"
                 }
             }
+            location.href = "/index.html"
         </script>
     </head>
     <body>

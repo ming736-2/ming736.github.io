@@ -4,12 +4,12 @@ class SiteNavbarTop extends HTMLElement {
   };
   connectedCallback() {
     function isactive(page) {
-      let active = page == (location.pathname == "/" ? "/index.html" : location.pathname) ? "active" : "inactive"
+      let active = page == (location.pathname == "/" ? "/legacy.html" : location.pathname) ? "active" : "inactive"
       //console.log(active, t, t.getAttribute("root")+page)
       return active
     }
     this.innerHTML = `
-        <div class="site-banner"><a href="?beta_site">check out the upcoming version of this site!</a></div>
+        <div class="site-banner"><a href="/">this is the older version of my site. click here for the new version.</a></div>
         <script>
         function myFunction() {
           document.getElementById("myDropdown").classList.toggle("show");
@@ -29,8 +29,8 @@ class SiteNavbarTop extends HTMLElement {
         </script>
         <header>
           <div class="topnav">
-            <a class="${isactive("/index.html")}" href="/index.html">Home</a>
-            <a class="${isactive("/mingchat.html")}" href="/mingchat.html">MingChat</a>
+            <a class="${isactive("/legacy.html")}" href="/legacy.html?version=1">Home</a>
+            <a class="${isactive("/mingchat.html")}" href="/mingchat.html?version=1">MingChat</a>
             <div class="dropdown">
               <button class="dropbtn">Documentation
                 <i class="fa fa-caret-down"></i>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ming736</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="components/head.js" type="text/javascript" defer></script>
+    <script src="components/download.js" type="text/javascript" defer></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const isBetaSite = urlParams.has('beta_site');
+        if (isBetaSite || urlParams.get('version') == "2") {location.href = "/beta.html"}
+    </script>
+    <navbar-top></navbar-top>
+</head>
+
+<body>
+    <h1>you found my website</h1>
+    <p>congrats, but there's nothing here yet.</p>
+</body>
+
+</html>
+<!--
+    
+-->

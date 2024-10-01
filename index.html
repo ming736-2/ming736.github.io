@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>ming736</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="components/head.js" type="text/javascript" defer></script>
-    <script src="components/download.js" type="text/javascript" defer></script>
-    <script>
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const isBetaSite = urlParams.has('beta_site');
-        if (isBetaSite || urlParams.get('version') == "2") {location.href = "/beta.html"}
-    </script>
-    <navbar-top></navbar-top>
-</head>
-
-<body>
-    <h1>you found my website</h1>
-    <p>congrats, but there's nothing here yet.</p>
-</body>
-
+<html lang="en">
+    <head>
+        <title>ming736</title>
+        <style>body{visibility: hidden;background-color: #272727;};</style>
+        <script src="/assets/components/main.js" type="text/javascript" defer></script>
+        <meta property="og:title" content="Home" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ming736.github.io/?beta_site" />
+        <meta property="og:description" content="welcome to my site!" />
+        <meta property="og:site_name" content="ming736's site" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ming736's site" />
+        <meta name="twitter:description" content="welcome to my site!" />
+        <meta name="twitter:site" content="@ming736_" />
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const isBetaSite = urlParams.has('beta_site');
+            const siteVersionOverride = urlParams.get('version');
+            if (siteVersionOverride == "1") {
+                location.href = "/legacy.html"
+            }
+        </script>
+    </head>
+    <body>
+        <h1>hello there!</h1>
+        <p>welcome to my website! i'm ming736, and i'm a programmer. i primarily code in JavaScript.</p>
+    </body>
 </html>
 <!--
     

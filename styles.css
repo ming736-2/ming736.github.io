@@ -150,7 +150,7 @@ div.download-frame {
 
 .site-banner {
   display: block;
-  background-color: yellow;
+  background-color: rgb(255, 174, 0);
   color: black;
   text-align: center;
   padding: 8px;

@@ -1,13 +1,13 @@
-const siteBanner = {
+const siteBanner = {} /*{
     text: "hi, welcome to the beta version of my new site!",
     bgColor: "green",
     fgColor: "white"
-}
+}*/
 const topbar = [
     {
         type: "button",
         text: "Home",
-        href: "/beta.html"
+        href: "/index.html"
     },
     {
         type: "button",
@@ -40,11 +40,11 @@ const topbar = [
         type: "dropdown",
         text: "Socials",
         contents: [
-            {
+            /*{
                 type: "button",
                 text: "Twitter",
                 href: "https://twitter.com/@ming736_"
-            },
+            },*/ // i no longer use twitter so
             {
                 type: "button",
                 text: "YouTube",
@@ -110,7 +110,7 @@ class SiteNavbarTop extends HTMLElement {
             <!--<a href="#about">About</a>-->
         */
         this.innerHTML = `
-          ${siteBanner.text && `<div class="site-banner" style="background-color:${siteBanner.bgColor};color:${siteBanner.fgColor}">${siteBanner.text}</div>`}
+          ${siteBanner.text ? `<div class="site-banner" style="background-color:${siteBanner.bgColor};color:${siteBanner.fgColor}">${siteBanner.text}</div>` : ""}
           <script>
           function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
