@@ -137,7 +137,7 @@ class SiteNavbarTop extends HTMLElement {
          * @param {Array} button 
          */
         function createButton(button) {
-            return `<a ${button.tooltip ? `title="${button.tooltip} " ` : ""} ${button.align ? `style="float: ${button.align}" ` : ""}class="${isactive(button.href)}" href="${button.href}${button.href.startsWith("/") ? "?beta_site" : ""}" ${button.href.startsWith("/") ? "" : "target=\"_blank\""}>${button.text + (button.href.startsWith("/") ? "" : " <img src='/assets/images/icons/material/open_in_new.128px.png' class='topbar-oin'>")}</a>`
+            return `<a ${button.tooltip ? `title="${button.tooltip} " ` : ""} ${button.align ? `style="float: ${button.align}" ` : ""}class="${isactive(button.href)}" href="${button.href}${button.href.startsWith("/") ? "" : ""}" ${button.href.startsWith("/") ? "" : "target=\"_blank\""}>${button.text + (button.href.startsWith("/") ? "" : " <img src='/assets/images/icons/material/open_in_new.128px.png' class='topbar-oin'>")}</a>`
         }
         function createDropdown(dropdown) {
             let btns = ""

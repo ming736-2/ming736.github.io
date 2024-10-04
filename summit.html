@@ -6,9 +6,9 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const isBetaSite = urlParams.has('beta_site');
-        if (isBetaSite) {
+        if (isBetaSite ||! urlParams.has("version")) {
             location.href = "/503.html"
-        } else {
+        } else if (urlParams.get("version") == "1") {
             location.href = "/unavailable.html"
         }
     </script>
